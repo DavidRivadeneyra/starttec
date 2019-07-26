@@ -1,0 +1,20 @@
+.service__content  {
+    display: grid;
+
+    @include from(l)    {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+        justify-content: center;
+    }
+}
+
+.service__item {
+    display: grid;
+    align-items: start;
+    grid-gap: 2rem;
+    grid-template-rows: var(--service__img) 1fr 1.5fr;
+}
+
+.service__img  {
+    justify-self: center;
+}

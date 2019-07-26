@@ -1,0 +1,95 @@
+
+.main-menu {
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    justify-content: center;
+    align-content: center;
+    grid-gap: 1.5rem;
+    position: fixed;
+    left: -180vw;
+    top: $header-heigth;
+    height: calc(100vh - #{$header-heigth});
+    width: 100vw;
+    background: var(--dark-color);
+    transition: left 300ms cubic-bezier(0.68, 0.55, 0.265, 1.3) 0s;
+    z-index: $z-modal;
+
+    @include from(l) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: static;
+        background: transparent;
+        height: $header-heigth;
+        grid-gap: $gap-l;
+        width: auto;
+    }
+
+    &.active {
+        left: 0;
+    }
+
+}
+
+.logo-white {
+    height: 2.2rem;
+}
+
+.logo-white, .menu--social__logo {
+    vertical-align: middle;
+}
+
+.menu--social__logo {
+    height: $menu--social__logo-s;
+}
+
+.menu--middle {
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: $gap-s;
+    justify-content: center;
+    text-align: center;
+    font-size: $fs-parrafos;
+    font-weight: 600;
+
+    @include from(l) {
+        grid-template-columns: repeat(3, 1fr);
+        align-content: center;
+        justify-content: space-between;
+        font-size: $fs-parrafos;
+        margin-right: 3rem;
+    }
+}
+
+.menu--social {
+    display: grid;
+    grid-template-columns: repeat(3, $menu--social__logo-s); 
+    justify-content: center;
+    grid-gap: $gap-m;
+
+    @include from(l) {
+        margin-right: 3rem;
+    }
+}
+
+// Theme menu
+
+.menu__link {
+    color: var(--light-color);
+}
+
+.menu__link:hover {
+    color: var(--primary-color);
+}
+
+.menu--social__logo {
+    fill: var(--light-color);
+}
+
+.menu--social__logo:hover {
+    fill: var(--primary-color);
+}
+
+.logo-name {
+    fill: var(--light-color);
+}

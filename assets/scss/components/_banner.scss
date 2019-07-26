@@ -1,0 +1,26 @@
+.main-banner__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cool-descrition {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.arrow {
+    position: fixed;
+    bottom: 15px;
+    right: 0;
+
+    @include from(l)    {
+        right: 4rem;
+    }
+}
+
+.arrow__img {
+    height: 2.5rem;
+    opacity: var(--opacity);
+}

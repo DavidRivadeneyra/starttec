@@ -1,0 +1,27 @@
+.process    {
+    display: grid;
+    grid-gap: $gap-m;
+
+    @include from(l)    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+}
+
+.process__content   {
+    align-self: start;
+}
+
+.process__img--content   {
+    justify-self: center;
+}
+
+.process__img--item   {
+    height: var(--process__img);
+}
+
+.process__states    {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: $gap-l
+}

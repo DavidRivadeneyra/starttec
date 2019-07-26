@@ -1,0 +1,93 @@
+.device__content {
+    width: 100%;
+    padding: 0;
+}
+
+.svg-ease {
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+}
+
+.svg-position {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+}
+
+.device__block {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 100%;
+
+    @include from(s) {
+        height: 250px;
+    }
+
+    @include from(m) {
+        height: 310px;
+    }
+
+    @include from(l) {
+        height: 400px;
+    }
+    
+}
+
+.desktop-svg {
+    display: none;
+    @include from(l) {
+        display: block;
+        margin-left: -25%;
+    }
+}
+
+.notebook-svg {
+    display: none;
+    @include from(m) {
+        display: block;
+        margin-left: -400px;
+    }
+    @include from(l) {
+        // display: block;
+        margin-left: -600px;
+    }
+}
+
+.table-svg {
+        height: 200px;
+        margin-left: -150px;
+    @include from(s) {
+        height: 248px;
+        margin-left: -200px;
+    }
+    @include from(m) {
+        margin-left: -50px;
+    }
+    @include from(l) {
+        margin-left: 180px;
+    }
+}
+
+.smartphone-svg {
+        height: 166px;
+        margin-left: 65px;
+    @include from(s){
+        height: 214px;
+        margin-left: 100px;
+    }
+    @include from(m) {
+        margin-left: 230px;
+    }
+    @include from(l) {
+        margin-left: 450px;
+    }
+}
+
+.service__img {
+    height: var(--service__img);
+}

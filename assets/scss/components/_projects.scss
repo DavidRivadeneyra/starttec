@@ -1,0 +1,53 @@
+.projects__container	{
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	margin-left: auto;
+	margin-right: auto;
+	grid-gap: 1rem;
+}
+
+.projects__box	{
+	@include ratio(1,1);
+    overflow: hidden;
+    border-radius: .5rem;
+	
+	&:hover .projects__description{
+		opacity: 1;
+	}
+	
+	&:hover .projects__img{
+		margin-top: 100px;
+	}
+}
+
+.projects__img	{
+	position: absolute;
+	height: 50%;
+	justify-self: center;
+	align-self: center;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+	transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
+}
+
+.projects__description	{
+	position: absolute;
+	text-align: center;
+	justify-self: center;
+	top: 3rem;
+	color: #292F36;
+	opacity: 0;
+	transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55) 0s;
+}
+
+.projects__title	{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.projects__subtitle	{
+	font-size: 2rem;
+	top: 4rem;
+}

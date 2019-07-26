@@ -1,0 +1,54 @@
+.btn {
+    font-size: var(--small-font-size);
+    padding: .7em 3em;
+}
+
+.btn-s {
+    font-size: var(--xs-font-size);
+    padding: .5em 1em;
+}
+
+.btn-l {
+    font-size: var(--small-font-size);
+    padding: 1em 6em;
+}
+
+[class^="btn"] {
+    color: $light-color;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    &:hover {
+        background-color: var(--alt-primary-color);
+    } 
+}
+
+.btn-secondary {
+    background-color: var(--svg-color-gray-alt);
+    &:hover {
+        background-color: var(--svg-color-gray);
+    }
+}
+
+.btn-danger {
+    background-color: var(--svg-red);
+    &:hover {
+        background-color: var(--alt-third-color)
+    }
+}
+
+.btn-success {
+    background-color: var(--svg-green);
+    &:hover {
+        background-color: var(--svg-green-alt);
+    }
+}
+
+.btn-warning {
+    background-color: var(--svg-yellow);
+    color: $dark-color;
+    &:hover {
+        background-color: $secondary-color;
+    }
+}

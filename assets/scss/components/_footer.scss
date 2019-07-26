@@ -1,0 +1,48 @@
+.footer {
+
+}
+
+.footer-copy    {
+
+}
+
+.footer__menu   {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer__link   {
+
+}
+
+.footer__svg    {
+    display: block;
+    height: 1rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    fill: var(--svg-color-gray);
+
+    &:hover {
+        fill: var(--primary-color)
+    }
+}   
+
+.creator    {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.creator__signature  {
+    font-size: var(--xs-font-size);
+    color: var(--svg-color-gray);
+
+}
+
+.creator__link   {
+    color: var(--svg-color-gray);
+}
+
